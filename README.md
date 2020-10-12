@@ -1,3 +1,16 @@
+# ECE601, Fall 2020, Project 3
+
+## Phase 1
+
+1. Identified the results I wanted to investigate/reproduce (BCDU-Net)
+2. Forked repository, set up locally on BU SCC
+3. Attepted to run without GPU (~runtime about 18 hours), aborted
+4. Setup GPU job on SCC using batch script
+5. Trained the model using the suggested data (~runtime about 1.5 hours)
+6. Evaluated the model and received good results
+
+*Below is the readme that appeared originally with the BCDU-Net implementation from which this was forked*
+
 # [Bi-Directional ConvLSTM U-Net with Densely Connected Convolutions ](http://openaccess.thecvf.com/content_ICCVW_2019/papers/VRMI/Azad_Bi-Directional_ConvLSTM_U-Net_with_Densley_Connected_Convolutions_ICCVW_2019_paper.pdf)
 
 
