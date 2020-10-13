@@ -7,9 +7,11 @@
 3. Attepted to run without GPU (~runtime about 18 hours), aborted
 4. Setup GPU job on SCC using batch script
 5. Trained the model using the suggested data (~runtime about 1.5 hours)
-6. Evaluated the model and received good results
+6. Evaluated the model and received good results (shown below, left is original image, middle is manually mapped, right is algorithm output)
 
-*Below is the readme that appeared originally with the BCDU-Net implementation from which this was forked*
+![sample data](https://raw.githubusercontent.com/JakeHellman/BCDU-Net/master/Lung%20Segmentation/sample_results.png)
+
+*Below is the readme that appeared originally with the BCDU-Net implementation from which this was forked.*
 
 # [Bi-Directional ConvLSTM U-Net with Densely Connected Convolutions ](http://openaccess.thecvf.com/content_ICCVW_2019/papers/VRMI/Azad_Bi-Directional_ConvLSTM_U-Net_with_Densley_Connected_Convolutions_ICCVW_2019_paper.pdf)
 
