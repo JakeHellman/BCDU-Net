@@ -18,7 +18,7 @@ my_data = 1
 ####################################  Load Data #####################################
 if my_data:
     folder    = './processed_data/'
-    te_data   = np.load(folder+'data_test.npy')
+    te_data   = np.load(folder+'my_data_test.npy')
 else:
     folder    = './processed_data/'
     te_data   = np.load(folder+'data_test.npy')
@@ -31,7 +31,7 @@ print('Dataset loaded')
 #te_data2  = dataset_normalized(te_data)
 te_data2 = te_data /255.
 if my_data:
-    mode = M.BCDU_net_D3(input_size = (1100,888,1))
+    model = M.BCDU_net_D3(input_size = (512,512,1))
 else:
     model = M.BCDU_net_D3(input_size = (512,512,1))
 model.summary()
