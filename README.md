@@ -11,6 +11,30 @@
 
 ![sample data](https://raw.githubusercontent.com/JakeHellman/BCDU-Net/master/Lung%20Segmentation/sample_results.png)
 
+## Phase 2
+
+Next, I had to integrate the data from the IFP Kaggle challenge with the existing model that had been trained during Phase 1 of this project. The steps to do this are outlined below.
+
+1. Create a program "preprocess_data.py" to import the DICOM data files and prepare them for processing by the model.
+  * The repository from which this one was forked worked with data in the Nifti format. The nibabel python module was used to import and process the data. The Kaggle IPF challenge uses data in the DICOM format. The steps to import the data follow.
+    * Import the data using the pydicom module
+    * Remove extraneous data outside of the imaging volume
+    * Convert the data to Hounsfield Units (HU)
+    * Crop the image to 512 x 512 pixels
+    * Convert the data from HU (0 - 1) to grayscale (0 - 255)
+2. Modify "evaluate_performance.py" to run with the Kaggle IFP data
+  * Modify data importing and exporting
+  * Remove calls to manually segmented images
+  * Eliminate performance calculations since no ground truth data is available
+3. Create a plotting program named "plot_results.py"
+  * This is used to genreate a visual repesentation of the model's inputs and outputs with the Kaggle IPF data
+  * These images can be used to determine the efficacy of the model on the Kaggle IPF data
+  
+A subset of these results (from running the BCDU model) on a subset of data from the Kaggle IPF challenge is shown in the figure below. On the left is the input image and on the right is the algorithm output.
+
+![my_sample_data](https://github.com/JakeHellman/BCDU-Net/blob/master/Lung%20Segmentation/my_sample_results.png)
+  
+
 *Below is the readme that appeared originally with the BCDU-Net implementation from which this was forked.*
 
 # [Bi-Directional ConvLSTM U-Net with Densely Connected Convolutions ](http://openaccess.thecvf.com/content_ICCVW_2019/papers/VRMI/Azad_Bi-Directional_ConvLSTM_U-Net_with_Densley_Connected_Convolutions_ICCVW_2019_paper.pdf)
