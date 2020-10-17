@@ -3,6 +3,7 @@ import pydicom
 import glob
 import os
 import re
+import Reza_functions as rf
 
 # Courtesy of Shashank
 
@@ -56,7 +57,11 @@ def load_data(data_dir):
             data[slice_number] = data[slice_number].astype(np.int16)
             
         data[slice_number] += np.int16(intercept)
+ 
     data = crop_and_normalize_dicom(data)
+    
+    for slice_number in range(data.shape[0]):
+        data[slice_number] = rf.hu_to_grayscale(data[slice_number])
     
     return data
 
