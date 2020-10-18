@@ -30,10 +30,11 @@ Next, I had to integrate the data from the IFP Kaggle challenge with the existin
   * This is used to genreate a visual repesentation of the model's inputs and outputs with the Kaggle IPF data
   * These images can be used to determine the efficacy of the model on the Kaggle IPF data
   
-A subset of these results (from running the BCDU model) on a subset of data from the Kaggle IPF challenge is shown in the figure below. On the left is the input image and on the right is the algorithm output.
+A subset of these results (from running the BCDU model) on a subset of data from the Kaggle IPF challenge is shown in the figure below. On the left is the input image and on the right is the algorithm output. Beneath that is a GIF animation showing the results.
 
 ![my_sample_data](https://github.com/JakeHellman/BCDU-Net/blob/master/Lung%20Segmentation/my_sample_results.png)
   
+![BCDU-Net IPF Results GIF](https://github.com/JakeHellman/BCDU-Net/blob/master/Lung%20Segmentation/my_sample_results.gif)
 
 *Below is the readme that appeared originally with the BCDU-Net implementation from which this was forked.*
 
